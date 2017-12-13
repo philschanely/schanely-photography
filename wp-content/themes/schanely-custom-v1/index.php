@@ -22,6 +22,14 @@
                 </li>
             <?php endwhile; ?>
             </ul>
+            <?php 
+				the_posts_pagination( 
+					array(
+						'prev_text' => '&laquo; Back',
+						'next_text' => 'Next &raquo;'
+					) 
+				);
+			?>
         <?php else : ?>
             <p>Page not found.</p>
         <?php endif; ?>
