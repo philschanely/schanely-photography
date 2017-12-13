@@ -1,6 +1,8 @@
 var carouselInterval = null;
 
 $(function(){
+    strip_ugly_responsive_img();
+
     $(".carousel").each(setupCarousel);
     $(".portfolio-list").each(setupPortfolio);
 
@@ -8,6 +10,16 @@ $(function(){
         showPoppin();
     }
 });
+
+function strip_ugly_responsive_img() {
+    $("img").each(function(i,o) {
+        $img = $(o);
+        $img.removeAttr("srcset");
+        $img.removeAttr("width");
+        $img.removeAttr("height");
+        $img.removeAttr("sizes");
+    });
+}
 
 function setupCarousel(i,o) {
     var $ctr = $(o);
@@ -80,17 +92,17 @@ function setupCarousel(i,o) {
 }
 
 function setupPortfolio(i, o) {
-     var $port = $(o);
-     $port.find("img").each(function(i,o){
-         var $img = $(o);
-         $img.closest("li").css("background-image", "url(" + $img.attr("src") + ")");
-         $img.hide();
-     })
+    var $port = $(o);
+    $port.find("img").each(function(i,o){
+        var $img = $(o);
+        $img.closest("li").css("background-image", "url(" + $img.attr("src") + ")");
+        $img.hide();
+    })
 }
 
 function getNext($ctr, _restartTimer) {
     var $active = $ctr.find(".active");
-    $active.removeClass("active"); 
+    $active.removeClass("active");
     var $next = $active.nextAll("li").length > 0
         ? $active.next("li")
         : $ctr.find("li:first-child");
@@ -119,7 +131,7 @@ function showPoppin() {
         .addClass("poppin");
     var $newsletterLink = $("<a />")
         .attr("href", "http://schanelyphotography.com/newsletter-signup/")
-        .html("Keep updated on promotions and special offers! Sign up for my newsletter &raquo;");
+        .html("To receive $20 off your first photo session and also periodic updates, announcements, and promotions sign up for my newsletter! &raquo;");
     var $newsletterClose = $("<button />").addClass("close").html("&times;").on("click", function(e) {
         e.preventDefault();
         $(e.target).closest(".poppin").removeClass("on");

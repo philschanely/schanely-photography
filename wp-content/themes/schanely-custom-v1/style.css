@@ -9,6 +9,9 @@
  */
 @import url("reset.css");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,300i,600,600i,700,700i|Roboto+Slab:300,700');
+.centered-text {
+  text-align: center;
+}
 .flex {
   display: -webkit-flex;
   display: -moz-flex;
@@ -279,6 +282,112 @@
 a {
   color: #B7DFD5;
 }
+.article {
+  padding: 0 24px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 844px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.article img {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.article img.portrait {
+  max-width: 400px;
+}
+.article .two-up {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  border: 1px solid rgba(151, 151, 151, 0.3);
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 1.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.article .two-up img {
+  width: 50%;
+  border: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+.article .two-up img:nth-child(odd) {
+  padding-right: 6px;
+}
+.article .two-up img:nth-child(even) {
+  padding-left: 6px;
+}
+.article .two-up img:nth-child(1),
+.article .two-up img:nth-child(2) {
+  padding-top: 12px;
+}
+.article .two-up img:nth-last-child(1),
+.article .two-up img:nth-last-child(2) {
+  padding-bottom: 12px;
+}
+.article-list {
+  width: 100%;
+  justify-content: center;
+  margin-top: -38px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.article-list a {
+  color: inherit;
+  text-decoration: none;
+}
+.article-list .btn-read-more {
+  width: 200px;
+}
+.article-list h2 {
+  text-align: left;
+}
+.article-list h2::after {
+  margin-left: 0;
+}
+.article-list li {
+  margin-top: 68px;
+}
+.article-list li:before {
+  display: none;
+}
+.article-list .article-date {
+  text-align: left;
+}
+.article-date {
+  font-style: italic;
+  text-align: center;
+  position: relative;
+  top: -14px;
+}
+.blog-hook {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-hook__cover {
+  box-sizing: border-box;
+  width: 458px;
+}
+.blog-hook__lead-in {
+  box-sizing: border-box;
+  width: 742px;
+  padding: 0 24px;
+}
 body {
   font-family: 'Roboto Slab', serif;
   font-size: 1.4rem;
@@ -399,6 +508,10 @@ blockquote cite:before {
 .btn.caution:hover {
   color: white;
   background-color: #FFDCAB;
+}
+.btn.small-btn {
+  width: 300px;
+  margin: 10px auto;
 }
 .carousel {
   overflow: hidden;
@@ -524,6 +637,14 @@ footer {
   border-top: 1px solid rgba(151, 151, 151, 0.3);
   margin: 40px auto;
 }
+footer .cm-pro {
+  width: 174px;
+  min-height: 174px;
+  background: left top no-repeat url("http://www.clickinmoms.com/amember/file/get/path/banners.56f54cba9bc77/i/47588");
+  background-size: 100%;
+  margin: 0 24px;
+  text-indent: -9999px;
+}
 footer .links {
   width: 174px;
   display: flex;
@@ -546,11 +667,22 @@ footer .footmatter {
   width: 284px;
 }
 .footer-spot-widgets {
-  width: 742px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin: 0;
 }
-.footer-spot-widgets li:before {
+.footer-spot-widgets > li::before {
   display: none;
+}
+.footer-spot-widgets > li:nth-child(1) {
+  width: 458px;
+}
+.footer-spot-widgets > li:nth-child(2) {
+  width: auto;
+}
+.footer-spot-widgets > li:nth-child(3) {
+  width: 284px;
 }
 .footer-spot-widgets .widget .nf-before-form-content {
   display: none;
@@ -627,7 +759,7 @@ h2 {
   text-align: center;
   font-size: 3.7rem;
   color: #B0C6DC;
-  line-height: 3.6rem;
+  line-height: 4.2rem;
   margin-bottom: 2.4rem;
   font-weight: normal;
 }
@@ -636,7 +768,7 @@ h2:after {
   content: "";
   border-bottom: 1px solid rgba(151, 151, 151, 0.3);
   width: 100px;
-  margin: 3px auto 2px;
+  margin: 24px auto 2px;
 }
 h3 {
   font-size: 2.3rem;
@@ -701,6 +833,10 @@ img {
 img.plain {
   border: none;
   padding: 0;
+}
+img.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
 }
 input,
 textarea {
@@ -1040,7 +1176,39 @@ ul.inline.centered > * {
 ul.inline.centered > *:last-child {
   margin-right: 0;
 }
+.widget .widgettitle {
+  display: none;
+}
 @media screen and (min-width: 1600px) {
+  .article {
+    margin-top: 48px;
+    margin-left: 378px;
+    margin-right: 378px;
+    padding-left: 0;
+  }
+  .article .article-date {
+    text-align: left;
+  }
+  .article h2 {
+    text-align: left;
+  }
+  .article h2:after {
+    margin-left: 0;
+  }
+  .article img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .article-list li {
+    max-width: 100%;
+  }
+  .blog-hook__cover {
+    width: 612px;
+  }
+  .blog-hook__lead-in {
+    width: 988px;
+  }
   body {
     width: 1600px;
     display: flex;
@@ -1049,10 +1217,16 @@ ul.inline.centered > *:last-child {
   footer {
     width: 100%;
   }
-  footer .links {
-    width: 234px;
+  .footer-spot-widgets {
+    width: 100%;
   }
-  footer .footmatter {
+  .footer-spot-widgets > li:nth-child(1) {
+    width: 612px;
+  }
+  .footer-spot-widgets > li:nth-child(2) {
+    width: auto;
+  }
+  .footer-spot-widgets > li:nth-child(3) {
     width: 378px;
   }
   .footer-spot-widgets {
@@ -1123,25 +1297,52 @@ ul.inline.centered > *:last-child {
   .portfolio-list li.short {
     height: 530px;
   }
+  nav ul {
+    width: 100%;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+  }
+  nav li {
+    border-bottom: 2px solid transparent;
+  }
 }
 @media screen and (max-width: 1200px) {
+  .article-list h2 {
+    font-size: 2.2rem;
+  }
+  .article-list .content > p {
+    display: none;
+  }
+  .article-list .content > p.btn-read-more {
+    display: block;
+  }
+  .blog-hook__cover {
+    width: 284px;
+  }
+  .blog-hook__lead-in {
+    width: 458px;
+  }
   body {
     width: 742px;
-  }
-  footer .links {
-    width: 110px;
   }
   footer .footmatter {
     width: 174px;
   }
+  footer .cm-pro {
+    width: 110px;
+    min-height: 110px;
+    margin: 0 24px;
+  }
   .footer-spot-widgets {
-    width: 458px;
+    width: 100%;
   }
-  .footer-spot-widgets .widget .email-container {
-    width: 168px;
+  .footer-spot-widgets > li:nth-child(1) {
+    width: 284px;
   }
-  .footer-spot-widgets .widget .submit-container {
-    width: 104px;
+  .footer-spot-widgets > li:nth-child(2) {
+    width: auto;
+  }
+  .footer-spot-widgets > li:nth-child(3) {
+    width: 174px;
   }
   main {
     margin-top: 38px;
@@ -1150,8 +1351,8 @@ ul.inline.centered > *:last-child {
     margin-top: 12px;
   }
   nav a {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .nf-before-form-content {
     margin-left: 0;
@@ -1199,29 +1400,57 @@ ul.inline.centered > *:last-child {
   }
 }
 @media screen and (max-width: 768px) {
+  .article-list .content > p {
+    display: block;
+  }
+  .article-list h2 {
+    text-align: center;
+  }
+  .article-list h2::after {
+    margin-left: auto;
+  }
+  .article-list .article-date {
+    text-align: center;
+  }
+  .article-list .btn-read-more {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog-hook {
+    display: block;
+  }
+  .blog-hook__cover {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog-hook__lead-in {
+    width: 100%;
+  }
   body {
     width: 100%;
   }
-  footer {
+  footer .cm-pro {
+    margin: 0 24px;
+    width: 174px;
+    min-height: 174px;
+    margin: 24px;
+  }
+  .footer-spot-widgets {
     flex-flow: row wrap;
-  }
-  footer .links {
-    width: 38%;
-    margin-left: 0;
-  }
-  footer .footmatter {
     width: 100%;
   }
   .footer-spot-widgets {
-    width: 62%;
+    width: 100%;
   }
-  .footer-spot-widgets .widget .email-container {
-    width: auto;
-    padding-right: 24px;
-    margin-right: 0;
+  .footer-spot-widgets > li:nth-child(1) {
+    width: 100%;
   }
-  .footer-spot-widgets .widget .submit-container {
-    width: auto;
+  .footer-spot-widgets > li:nth-child(2) {
+    width: 100%;
+  }
+  .footer-spot-widgets > li:nth-child(3) {
+    width: 100%;
   }
   header {
     padding-top: 24px;
@@ -1239,10 +1468,10 @@ ul.inline.centered > *:last-child {
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.6rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
   nav a {
-    padding: 6px 10px;
+    padding: 6px 8px;
   }
   nav .current-menu-item a,
   nav li:hover a {
