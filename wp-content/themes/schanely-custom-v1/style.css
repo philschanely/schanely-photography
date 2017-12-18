@@ -820,6 +820,10 @@ header {
 .highlight.danger {
   color: #ffb2ab;
 }
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+}
 html {
   font-size: 10px;
 }
