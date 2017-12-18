@@ -1,0 +1,138 @@
+
+@media screen and (max-width:768px) {
+
+    @g0:62%;
+    @h0:50%;
+    @g1:38%;
+
+    .article-list {
+        .content > p {
+            display: block;
+        }
+        h2 {
+            text-align: center;
+            &::after { margin-left: auto; }
+        }
+        .article-date { text-align: center;}
+        .btn-read-more {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .blog-hook { display: block; }
+    .blog-hook__cover   {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .blog-hook__lead-in { width: 100%; }
+    body {
+        width:100%;
+    }
+    footer {
+        .cm-pro {
+          margin: 0 @pad;
+          width:@g3;
+          min-height:@g3;
+          margin: @pad;
+        }
+    }
+    .footer-spot-widgets {
+        flex-flow:row wrap;
+        width:100%;
+    }
+    .footer-spot-widgets {
+      width: 100%;
+      & > li {
+        &:nth-child(1) { width: 100%; }
+        &:nth-child(2) { width: 100%; }
+        &:nth-child(3) { width: 100%; }
+      }
+    }
+    header {
+        padding-top:24px;
+    }
+    main {
+        margin-top:38px;
+    }
+    nav {
+        margin-top:12px;
+        ul {
+            align-items:flex-end;
+        }
+        li {
+            font-size:1.2rem;
+            text-align: center;
+            line-height:1.6rem;
+            letter-spacing:1px;
+        }
+        a {
+            padding:6px 8px;
+        }
+        .current-menu-item a,
+        li:hover a {
+            padding-bottom:5px;
+        }
+    }
+    .nf-before-form-content {
+        margin-left:0;
+    }
+    .nf-form-content {
+        .label-left {
+            .nf-field-label {
+                width:@g3;
+            }
+        }
+    }
+    .page-contact {
+        .nf-form-cont {
+            width:@g0;
+        }
+    }
+    .page-home {
+        .lead {}
+        .home-blurb {
+            padding-top:0;
+        }
+        .home-btn-group {
+            margin-top:20px;
+            .btn {
+                flex:1;
+                margin-left:12px;
+                &:first-of-type {
+                    margin-left:0;
+                }
+            }
+        }
+    }
+    .portfolio-list {
+        li {
+            height:@g1;
+            margin-bottom:12px;
+            height:140px;
+            &:nth-child(2n-1) {
+                margin-right:0;
+                border-right:none;
+            }
+            &.box-g0 {
+                width:@g0;
+            }
+            &.box-g1 {
+                width:@g1;
+            }
+            &.box-h0 {
+                width:@h0;
+            }
+            &.tall {
+                height:180px;
+            }
+            &.short {
+                height:130px;
+            }
+            &:before {
+                border-width:6px;
+            }
+        }
+    }
+}

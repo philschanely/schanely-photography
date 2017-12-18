@@ -1,0 +1,109 @@
+@media screen and (max-width:1200px) {
+
+    @g0:458px;
+    @h0:371px;
+    @g1:284px;
+    @g2:174px;
+    @g3:110px;
+    @h2:@g2/2;
+    @g2h:@g2+@h2;
+
+    .article-list {
+        h2 { font-size: 2.2rem; }
+        .content > p {
+            display: none;
+            &.btn-read-more {
+                display: block;
+            }
+        }
+    }
+    .blog-hook {}
+    .blog-hook__cover   { width: @g1; }
+    .blog-hook__lead-in { width: @g0; }
+    body {
+        width:742px;
+    }
+    footer {
+        //.links { width:@g3; }
+        .footmatter { width:@g2; }
+        .cm-pro {
+            width:@g3;
+            min-height:@g3;
+            margin: 0 @pad;
+        }
+    }
+    .footer-spot-widgets {
+      width: 100%;
+      & > li {
+        &:nth-child(1) { width: @g1; }
+        &:nth-child(2) { width: auto; }
+        &:nth-child(3) { width: @g2; }
+      }
+    }
+    main {
+        margin-top:38px;
+    }
+    nav {
+        margin-top:12px;
+        a {
+            padding-left:20px;
+            padding-right:20px;
+        }
+    }
+    .nf-before-form-content {
+        margin-left:0;
+    }
+    .nf-form-content {
+        .label-left {
+            .nf-field-label {
+                width:100%;
+                text-align: left;
+            }
+        }
+    }
+    .page-contact {
+        .nf-form-cont {
+            width:100%;
+        }
+    }
+    .page-home {
+        .lead {
+            font-size:1.4rem;
+        }
+        .home-blurb {
+            padding-top:50px - 38px;
+        }
+        .home-btn-group {
+            margin-top:20px;
+            .btn {
+                flex:1;
+                margin-left:12px;
+                &:first-of-type {
+                    margin-left:0;
+                }
+            }
+        }
+    }
+    .portfolio-list {
+        li {
+            height:@g1;
+            &.box-g0 {
+                width:@g0 - 12;
+            }
+            &.box-g1 {
+                width:@g1 - 12;
+            }
+            &.box-h0 {
+                width:@h0 - 12;
+            }
+            &.tall {
+                height:340px;
+            }
+            &.short {
+                height:240px;
+            }
+        }
+    }
+
+}/* CSS Document */
+

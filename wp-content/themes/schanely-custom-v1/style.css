@@ -535,6 +535,7 @@ blockquote cite:before {
   background-position: center center;
   background-size: cover;
   height: 458px;
+  margin-bottom: 24px;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -1003,6 +1004,7 @@ p.lead .media-icon {
   background-position: center center;
   background-size: cover;
   height: 458px;
+  margin-bottom: 24px;
 }
 .portfolio-list li img {
   padding: 0;
@@ -1022,25 +1024,25 @@ p.lead .media-icon {
   transform: rotate(0deg);
 }
 .portfolio-list li:nth-child(2n-1) {
-  margin-right: 12px;
+  margin-right: 24px;
 }
 .portfolio-list li:nth-child(2n-1) {
-  margin-right: 12px;
+  margin-right: 24px;
 }
 .portfolio-list li.box-g0 {
-  width: 730px;
+  width: 718px;
 }
 .portfolio-list li.box-g1 {
-  width: 446px;
+  width: 434px;
 }
 .portfolio-list li.box-h0 {
-  width: 588px;
+  width: 576px;
 }
 .portfolio-list li.tall {
-  height: 558px;
+  height: 548px;
 }
 .portfolio-list li.short {
-  height: 400px;
+  height: 386px;
 }
 .photo-frame {
   border: 1px solid #dfdfdf;
@@ -1050,6 +1052,7 @@ p.lead .media-icon {
   background-position: center center;
   background-size: cover;
   height: 458px;
+  margin-bottom: 24px;
   width: 100%;
   height: auto;
   display: flex;
@@ -1097,6 +1100,7 @@ p.lead .media-icon {
   background-position: center center;
   background-size: cover;
   height: 458px;
+  margin-bottom: 24px;
 }
 .photo-box img {
   padding: 0;
@@ -1294,23 +1298,10 @@ ul.inline.centered > *:last-child {
   .page-home main {
     margin-top: 0;
   }
-  .portfolio-list li {
-    height: 612px;
-  }
-  .portfolio-list li.box-g0 {
-    width: 976px;
-  }
-  .portfolio-list li.box-g1 {
-    width: 600px;
-  }
-  .portfolio-list li.box-h0 {
-    width: 788px;
-  }
-  .portfolio-list li.tall {
-    height: 750px;
-  }
-  .portfolio-list li.short {
-    height: 530px;
+  .portfolio-list {
+    width: 1177px;
+    margin-left: auto;
+    margin-right: auto;
   }
   nav ul {
     width: 100%;
