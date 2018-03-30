@@ -1,0 +1,29 @@
+/*
+ Theme Name: Schanely Custom
+ Theme URI: http://philschanely.com
+ Author: Phil Schanely
+ Author URI: http://philschanely.com
+ Description: Custom theme for Karen Schanely Photography
+ Version: 1.0
+ Tags:
+ */
+
+// Config
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'layout';
+
+// Elements
+@import 'basics';
+@import 'type';
+@import 'forms';
+
+// Custom components
+@import 'nav';
+@import 'footer';
+@import 'photos';
+@import 'home';
+@import 'portfolio';
+@import 'blog';
+@import 'poppin';

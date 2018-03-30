@@ -1,0 +1,26 @@
+{
+  "name": "schanely-photography",
+  "version": "1.0.0",
+  "description": "WP Theme for Schanely Photography",
+  "main": "index.php",
+  "scripts": {
+    "sync": "browser-sync start -s \"src\" -f \"src/**/*.*\"",
+    "sass": "node-sass -w --include-path='src/sass' --source-map=true src/style.scss src/style.css",
+    "start": "npm-run-all -p sync sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philschanely/schanely-photography.git"
+  },
+  "author": "Phil Schanely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philschanely/schanely-photography/issues"
+  },
+  "homepage": "https://github.com/philschanely/schanely-photography#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "node-sass": "^4.8.3",
+    "npm-run-all": "^4.1.2"
+  }
+}
