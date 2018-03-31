@@ -24,7 +24,7 @@ footer {
     li {
       margin: 0 10px;
 
-      &:before {
+      &::before {
         display: none!important;
       }
     }

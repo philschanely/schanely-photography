@@ -18,7 +18,7 @@ blockquote {
     font-size: 1.4rem;
     margin-left: 20px;
 
-    &:before {
+    &::before {
       content: "\2013 ";
     }
   }
@@ -155,7 +155,7 @@ h4 {
 li {
   list-style: none;
 
-  &:before {
+  &::before {
     content: "";
     display: block;
     float: left;

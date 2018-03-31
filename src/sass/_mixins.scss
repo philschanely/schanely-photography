@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 @mixin before-note($msg) {
-    &:before {
+    &::before {
         display: block;
         content:$msg;
         text-transform: uppercase;
@@ -26,6 +26,14 @@
         color:white;
         background-color:$color;
     }
+}
+@mixin col-pad($pad-l: $pad, $pad-r: $pad) {
+  padding-left: $pad-l;
+  padding-right: $pad-r;
+}
+@mixin fill-pad($margin-l: -1 * $pad, $margin-r: -1 * $pad) {
+  margin-left: $margin-l;
+  margin-right: $margin-r;
 }
 @mixin flex {
     display: -webkit-flex;
@@ -93,7 +101,7 @@
     background-size: cover;
     height:$g1;
 	  margin-bottom: 24px;
-    &:before {
+    &::before {
         display: block;
         content: "";
         border: 10px solid white;
