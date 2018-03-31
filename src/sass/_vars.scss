@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,300i,600,600i,700,700i|Roboto+Slab:300,700');
 
-$color-body:         fadeout(#555555, 30%);
-$color-border:       fadeout(#979797, 70%);
+$color-body:         fade-out(#555555, 0.3);
+$color-border:       fade-out(#979797, 0.7); 
 $color-accent:       #B7DFD5;
 $color-primary:      #B0C6DC;
 $color-primary-dark: #133457;

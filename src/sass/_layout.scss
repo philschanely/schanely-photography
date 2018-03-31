@@ -37,8 +37,7 @@
 }
 .centered {
     text-align: center;
-    margin-left:auto;
-    margin-right:auto;
+    @include center;
 }
 .half-pad {
     padding-left: $pad/2;
@@ -91,24 +90,13 @@
     margin-right:$g2h;
 }
 .rule {
-    padding-left:$pad - 1;
-    padding-right:$pad - 1;
-    border-left:1px solid $color-border;
-    border-right:1px solid $color-border;
+    @include rule;
 }
 .rule-right {
-    padding-right:$pad - 1;
-    border-right:1px solid $color-border;
-    &.half-pad-right {
-        padding-right:$pad/2 - 1;
-    }
+    @include rule-right;
 }
 .rule-left {
-    padding-left:$pad - 1;
-    border-left:1px solid $color-border;
-    &.half-pad-left {
-        padding-left:$pad/2 - 1;
-    }
+    @include rule-left;
 }
 
 @include media-large {
@@ -122,6 +110,7 @@
 
     .box-full {
         width:$g0;
+        @include center;
     }
     .box-h0 {
         width:$h0;

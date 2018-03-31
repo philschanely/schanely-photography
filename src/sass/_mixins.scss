@@ -27,6 +27,10 @@
         background-color:$color;
     }
 }
+@mixin center() {
+  margin-left:auto;
+  margin-right:auto;
+}
 @mixin col-pad($pad-l: $pad, $pad-r: $pad) {
   padding-left: $pad-l;
   padding-right: $pad-r;
@@ -113,4 +117,24 @@
         box-sizing: border-box;
         transform: rotate(0deg);
     }
+}
+@mixin rule() {
+  padding-left:$pad - 1;
+  padding-right:$pad - 1;
+  border-left:1px solid $color-border;
+  border-right:1px solid $color-border;
+}
+@mixin rule-right() {
+  padding-right:$pad - 1;
+  border-right:1px solid $color-border;
+  &.half-pad-right {
+      padding-right:$pad/2 - 1;
+  }
+}
+@mixin rule-left() {
+  padding-left:$pad - 1;
+  border-left:1px solid $color-border;
+  &.half-pad-left {
+      padding-left:$pad/2 - 1;
+  }
 }
