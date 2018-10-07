@@ -50,4 +50,12 @@
       width: 705/1600 * 100%;
     }
   }
+  &.col-5 {
+    padding: 12px 6px;
+    & > img {
+      width: 20%;
+      margin-right: 0;
+      padding: 0 6px;
+    }
+  }
 }

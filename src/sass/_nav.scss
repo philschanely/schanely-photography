@@ -112,24 +112,21 @@ nav {
   @include media-phone {
     margin-top: 12px;
 
-    ul {
+    > ul {
       align-items: flex-end;
-    }
-
-    li {
-      font-size: 1.2rem;
-      text-align: center;
-      line-height: 1.6rem;
-      letter-spacing: 1px;
-    }
-
-    a {
-      padding: 6px 8px;
-    }
-
-    .current-menu-item a,
-    li:hover a {
-      padding-bottom: 5px;
+      > li {
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.6rem;
+        letter-spacing: 1px;
+        a {
+          padding: 6px 8px;
+        }
+      }
+      li.current-menu-item a,
+      li:hover a {
+        padding-bottom: 5px;
+      }
     }
   }
 }
