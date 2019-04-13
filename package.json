@@ -4,9 +4,21 @@
   "description": "WP Theme for Schanely Photography",
   "main": "index.php",
   "scripts": {
-    "sync": "browser-sync start -s \"src\" -f \"src/**/*.*\"",
-    "sass": "node-sass -w --include-path='src/sass' --source-map=true src/style.scss src/style.css",
-    "start": "npm-run-all -p sync sass"
+    "bundle-dev": "watchify lib/index.js -o dev/app.js",
+    "bundle-prod": "watchify lib/index.js -o src/app.js",
+    "bundle-build": "browserify lib -o src/bundle.js",
+    "babel-dev": "babel dev/_scripts -d lib -w",
+    "babel-build": "babel dev/_scripts -d lib",
+    "babel": "npm-run-all -p babel-dev babel-prod",
+    "sync-prod": "browser-sync start -s \"src\" -f \"src/**/*.*\"",
+    "sync-dev": "browser-sync start -s \"dev\" -f \"dev/**/*.*\"",
+    "sass-dev": "node-sass -w --include-path='dev/_sass' --source-map=true dev/style.scss dev/style.css",
+    "sass-prod": "node-sass -w --include-path='dev/_sass' dev/style.scss src/style.css",
+    "sass-build": "node-sass --include-path='dev/_sass' dev/style.scss src/style.css",
+    "sass": "npm-run-all -p sass-dev sass-prod",
+    "start-dev": "npm-run-all -p sync-dev sass babel-dev bundle-dev",
+    "start": "npm-run-all -p sync-prod sass babel-prod bundle-prod",
+    "build": "npm-run-all sass-build babel-build bundle-build"
   },
   "repository": {
     "type": "git",
@@ -19,8 +31,19 @@
   },
   "homepage": "https://github.com/philschanely/schanely-photography#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "node-sass": "^4.8.3",
-    "npm-run-all": "^4.1.2"
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.3",
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "enquire.js": "^2.1.6",
+    "jquery": "^3.4.0",
+    "uniq": "^1.0.1"
   }
 }
