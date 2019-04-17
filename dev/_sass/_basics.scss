@@ -1,16 +1,25 @@
 body {
-  @include font-body;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
+  font-size: 1.4rem;
   font-weight: 300;
-  width: 1200px;
-  margin: 0 auto;
-  transition: 0.3s all linear;
   color: $color-body;
+  line-height: 2.4rem;
+  transition: .3s all linear;
+
+  @include font-body;
 }
 
 header {
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 24px;
+
+  @include media-large {
+    width: $g2-large;
+  }
+
+  @include media-phone {
+    padding-top: 24px;
+  }
 }
 
 hr {
@@ -23,69 +32,35 @@ html {
 }
 
 img {
-  display: block;
-  @include bbox;
   max-width: 100%;
-  border: 1px solid $color-border;
-  padding: $pad/2 - 1;
+  display: block;
 
-  &.plain {
-    border: none;
-    padding: 0;
-  }
+  @include bbox;
+}
 
-  &.aligncenter {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.img--bordered {
+  @include bordered-image;
+}
+
+.img--centered {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 main {
-  margin-top: 38px;
+  margin: 24px auto;
+
+  @include media-to($size-desk) {
+    max-width: 742px;
+  }
+
+  @include media-from($size-desk) {
+    max-width: 1200px;
+  }
 }
 
 .widget {
   .widgettitle {
     display: none;
-  }
-}
-
-@include media-large {
-  body {
-    width: 1600px;
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  header {
-    width: $g2-large;
-  }
-
-  main {
-    margin-top: 38px;
-    width: 100%;
-  }
-}
-
-@include media-tab {
-  body {
-    width: 742px;
-  }
-  main {
-    margin-top: 38px;
-  }
-}
-
-@include media-phone {
-  body {
-    width: 100%;
-  }
-
-  header {
-    padding-top: 24px;
-  }
-
-  main {
-    margin-top: 38px;
   }
 }

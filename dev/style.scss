@@ -8,23 +8,18 @@
  Tags:
  */
 
-// Config
-@import 'reset';
-@import 'vars';
-@import 'mixins';
-@import 'layout';
+// Configs
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "layout";
 
 // Elements
-@import 'basics';
-@import 'type';
-@import 'forms';
+@import "basics";
+@import "type";
 
 // Custom components
-@import 'nav';
-@import 'footer';
-@import 'photos';
-@import 'home';
-@import 'portfolio';
-@import 'sessions';
-@import 'blog';
-@import 'poppin'; 
+@import "components/index";
+
+// Page styles
+@import "pages/index";

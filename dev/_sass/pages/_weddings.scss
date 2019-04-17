@@ -1,0 +1,35 @@
+.page-weddings {}
+
+.page-weddings__cover {
+  padding-bottom: 12px;
+  border-bottom: 1px solid $color-border;
+}
+
+.page-weddings__main {}
+
+.page-weddings__tagline {
+  @include media-to($size-tab) {
+    margin-top: 12px;
+    margin-bottom: 24px;
+  }
+
+  @include media-betw($size-tab, $size-desk) {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  @include media-from($size-desk) {
+    margin-top: 72px;
+    margin-bottom: 60px;
+  }
+}
+
+.page-weddings__steps {}
+
+.page-weddings__pricing {
+  margin-top: 48px;
+}
+
+.page-weddings__cta {
+  margin-bottom: 60px;
+}

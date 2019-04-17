@@ -1,0 +1,21 @@
+.highlight {
+  &.primary {
+    color: $color-primary-dark;
+  }
+
+  &.accent {
+    color: $color-accent;
+  }
+
+  &.caution {
+    color: $color-caution;
+  }
+
+  &.info {
+    color: $color-info;
+  }
+
+  &.danger {
+    color: $color-danger;
+  }
+}
