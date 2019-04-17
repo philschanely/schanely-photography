@@ -1136,18 +1136,18 @@ textarea {
     grid-row: 1 / 1; }
   .interactive-steps--on .interactive-step:not(.interactive-step--active) {
     opacity: 0; }
-  .interactive-steps--on .interactive-step__text::after {
+  .interactive-steps--on .interactive-step__btn::before {
     content: "";
     margin-right: auto;
     margin-left: auto;
     width: 100px;
     height: 48px;
-    border-bottom: 1px solid rgba(151, 151, 151, 0.3); }
-    @media (max-width: 739px) {
-      .interactive-steps--on .interactive-step__text::after {
+    border-top: 1px solid rgba(151, 151, 151, 0.3); }
+    @media (max-width: 629px) {
+      .interactive-steps--on .interactive-step__btn::before {
         display: none; } }
-    @media (min-width: 740px) {
-      .interactive-steps--on .interactive-step__text::after {
+    @media (min-width: 630px) {
+      .interactive-steps--on .interactive-step__btn::before {
         display: block; } }
 
 .interactive-step--active {
@@ -1194,12 +1194,15 @@ textarea {
     .interactive-step {
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "text figure" "btn  figure"; } }
-  @media (min-width: 630px) and (max-width: 1199px) {
+  @media (min-width: 630px) and (max-width: 739px) {
     .interactive-step {
-      grid-template-rows: 200px 200px; } }
+      grid-template-rows: 200px 150px; } }
+  @media (min-width: 740px) and (max-width: 1199px) {
+    .interactive-step {
+      grid-template-rows: 250px 150px; } }
   @media (min-width: 1200px) {
     .interactive-step {
-      grid-template-rows: 300px 300px; } }
+      grid-template-rows: 350px 150px; } }
 
 .interactive-step__figure {
   width: 100%;
@@ -1211,14 +1214,24 @@ textarea {
   grid-area: text;
   text-align: center; }
 
-@media (max-width: 739px) {
+@media (max-width: 629px) {
   .interactive-step__label {
     margin-top: 18px;
     margin-bottom: 24px; } }
 
-@media (min-width: 740px) {
+@media (min-width: 630px) and (max-width: 739px) {
+  .interactive-step__label {
+    margin-top: 36px;
+    margin-bottom: 24px; } }
+
+@media (min-width: 740px) and (max-width: 1199px) {
   .interactive-step__label {
     margin-top: 48px;
+    margin-bottom: 36px; } }
+
+@media (min-width: 1200px) {
+  .interactive-step__label {
+    margin-top: 84px;
     margin-bottom: 48px; } }
 
 .interactive-step__btn {

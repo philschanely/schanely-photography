@@ -19,20 +19,20 @@
     opacity: 0;
   }
 
-  .interactive-step__text {
-    &::after {
+  .interactive-step__btn {
+    &::before {
       content: "";
       margin-right: auto;
       margin-left: auto;
       width: 100px;
       height: 48px;
-      border-bottom: 1px solid $color-border;
+      border-top: 1px solid $color-border;
 
-      @include media-to($size-tab) {
+      @include media-to(630px) {
         display: none;
       }
 
-      @include media-from($size-tab) {
+      @include media-from(630px) {
         display: block;
       }
     }
@@ -75,12 +75,16 @@
       "btn  figure";
   }
 
-  @include media-betw(630px, $size-desk) {
-    grid-template-rows: 200px 200px;
+  @include media-betw(630px, $size-tab) {
+    grid-template-rows: 200px 150px;
+  }
+
+  @include media-betw($size-tab, $size-desk) {
+    grid-template-rows: 250px 150px;
   }
 
   @include media-from($size-desk) {
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 350px 150px;
   }
 }
 
@@ -97,14 +101,23 @@
 }
 
 .interactive-step__label {
-
-  @include media-to($size-tab) {
+  @include media-to(630px) {
     margin-top: 18px;
     margin-bottom: 24px;
   }
 
-  @include media-from($size-tab) {
+  @include media-betw(630px, $size-tab) {
+    margin-top: 36px;
+    margin-bottom: 24px;
+  }
+
+  @include media-betw($size-tab, $size-desk) {
     margin-top: 48px;
+    margin-bottom: 36px;
+  }
+
+  @include media-from($size-desk) {
+    margin-top: 84px;
     margin-bottom: 48px;
   }
 }
