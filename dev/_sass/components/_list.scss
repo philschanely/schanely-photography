@@ -1,0 +1,45 @@
+ul {
+  margin-top: 0;
+  margin-right: 0;
+
+  &:not(.list--unstyled):not(.menu) {
+    margin-bottom: 24px;
+
+    &:not(.list--inline) {
+      margin-left: 30px;
+    }
+
+    > li::before {
+      display: block;
+    }
+  }
+}
+
+.list--unstyled {
+  margin-bottom: 0;
+  margin-left: 0;
+
+  > li::before {
+    display: none;
+  }
+}
+
+.list--inline {
+  margin-left: 0;
+  display: flex;
+
+  &:not(.list--centered) {
+    justify-content: space-between;
+  }
+}
+
+.list--centered {
+  align-items: center;
+  justify-content: center;
+
+  & > * {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

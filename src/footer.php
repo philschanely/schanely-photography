@@ -1,6 +1,6 @@
 
 <footer>
-    <ul class="footer-spot-widgets">
+    <ul class="footer-spot-widgets list-unstyled">
     <?php dynamic_sidebar('footer-spot'); ?>
     </ul>
 <!---->

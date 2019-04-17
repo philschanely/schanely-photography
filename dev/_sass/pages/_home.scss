@@ -1,0 +1,94 @@
+
+/* TODO: Make to generic btn-group */
+// .home-btn-group {
+//   margin-top: 50px;
+//   display: flex;
+//
+//   .btn {
+//     margin-left: 24px;
+//     flex: 1;
+//
+//     &:first-of-type {
+//       margin-left: 0;
+//     }
+//   }
+//
+//   @include media-phone {
+//     margin-top: 20px;
+//
+//     .btn {
+//       margin-left: 12px;
+//       flex: 1;
+//
+//       &:first-of-type {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+//
+//   @include media-tab {
+//     margin-top: 20px;
+//
+//     .btn {
+//       margin-left: 12px;
+//       flex: 1;
+//
+//       &:first-of-type {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+// }
+
+.page-home {
+  width: 100%;
+}
+
+.page-home__intro {
+
+  .lead {
+    text-align: center;
+
+    em {
+      font-weight: 400;
+      color: $color-primary;
+    }
+  }
+
+  @include media-to($size-tab) {
+    padding-top: 0;
+  }
+
+  @include media-betw($size-tab, $size-desk) {
+    padding-top: 12px;
+  }
+
+  @include media-from($size-desk) {
+    padding-top: 24px;
+  }
+}
+
+.page-home__main {
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-large {
+    margin-top: 0;
+    max-width: 1600px;
+  }
+}
+
+.page-home__carousel {
+  margin-bottom: 40px;
+  border-bottom: 1px solid $color-border;
+}
+
+.page-home__testimonials {
+  align-self: center;
+}
+
+.page-home__testimonial {
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
+}

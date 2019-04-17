@@ -1,0 +1,17 @@
+.page-about__figure {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 12px;
+
+  @include bordered-image;
+}
+
+.page-about__main {
+  align-items: flex-start;
+
+  @include center;
+
+  @include media-from($size-lg) {
+    max-width: 1600px;
+  }
+}

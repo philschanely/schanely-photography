@@ -1,0 +1,144 @@
+.cover {
+  position: relative;
+
+  &:not(.cover--contained) {
+    @include media-to($size-tab) {
+      height: 300px;
+    }
+
+    @include media-betw($size-tab, $size-desk) {
+      height: 460px;
+    }
+
+    @include media-betw($size-desk, $size-lg) {
+      height: 640px;
+    }
+
+    @include media-from($size-lg) {
+      height: 760px;
+    }
+  }
+}
+
+.cover--contained {
+  @include bordered-image;
+
+  &:not(.cover--5-even) {
+    @include media-to($size-tab) {
+      height: 100px;
+    }
+
+    @include media-betw($size-tab, $size-desk) {
+      height: 240px;
+    }
+
+    @include media-betw($size-desk, $size-lg) {
+      height: 320px;
+    }
+
+    @include media-from($size-lg) {
+      height: 460px;
+    }
+  }
+
+  @include media-from($size-lg) {
+    margin-right: -200px;
+    margin-left: -200px;
+    width: 1600px;
+  }
+}
+
+.cover--grid {
+  display: grid;
+  grid-column-gap: 12px;
+}
+
+.cover--3-even {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cover--3-mid-xs {
+  grid-template-columns: 41fr 18fr 41fr;
+}
+
+.cover--3-mid-sm {
+  grid-template-columns: 37fr 24fr 37fr;
+}
+
+.cover--3-mid-lg {
+  grid-template-columns: 27fr 46fr 27fr;
+}
+
+.cover--5-even {
+  grid-template-columns: repeat(5, 1fr);
+
+  @include media-to($size-tab) {
+    height: 100px;
+  }
+
+  @include media-betw($size-tab, $size-desk) {
+    height: 200px;
+  }
+
+  @include media-betw($size-desk, $size-lg) {
+    height: 280px;
+  }
+
+  @include media-from($size-lg) {
+    height: 360px;
+  }
+}
+
+.cover__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover__text {
+  margin-bottom: 0;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  left: 0;
+  background-color: $color-screen;
+
+  @include bbox;
+
+  @include media-to($size-phone) {
+    padding-right: 33vw;
+    padding-left: 12px;
+    text-indent: 0;
+  }
+
+  @include media-from($size-phone) {
+    padding-right: 12px;
+  }
+
+  @include media-betw($size-phone, $size-desk) {
+    padding-left: 48px;
+    text-indent: -30px;
+  }
+
+  @include media-to($size-desk) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  @include media-betw($size-desk, $size-lg) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 15vw;
+  }
+
+  @include media-from($size-desk) {
+    text-indent: -60px;
+  }
+
+  @include media-from($size-lg) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 25vw;
+  }
+}

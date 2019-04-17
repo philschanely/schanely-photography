@@ -9,40 +9,40 @@ body.poppin-on {
 }
 
 .poppin {
-  @include font-heading;
-  position: fixed;
-  top: -60px;
-  z-index: 2;
-  left: 0;
-  right: 0;
   display: flex;
-  background-color: $color-accent;
-  transition: 0.2s all linear;
+  position: fixed;
+  z-index: 2;
+  top: -60px;
+  right: 0;
+  left: 0;
+  background-color: $color-primary-dark;
+  transition: .2s all linear;
+
+  @include font-heading;
 
   &.on {
     top: 0;
   }
 
   a {
-    color: white;
-    font-weight: 600;
-    display: block;
     padding: 8px 10px 5px;
-    color: white;
+    display: block;
     flex: 1;
-    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
     text-align: center;
+    text-decoration: none;
   }
 
   .close {
-    outline: none;
-    background: transparent;
-    color: white;
-    font-size: 2.3rem;
-    width: 30px;
-    border: none;
-    box-sizing: border-box;
     padding: 5px 20px 8px;
+    width: 30px;
+    box-sizing: border-box;
+    font-size: 2.3rem;
+    color: #fff;
+    border: none;
+    background: transparent;
+    outline: none;
     cursor: pointer;
   }
 }

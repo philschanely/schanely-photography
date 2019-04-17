@@ -1,0 +1,5 @@
+.page-contact__main {
+  @include media-from($size-lg) {
+    max-width: 1600px;
+  }
+}

@@ -1,0 +1,117 @@
+.interactive-steps {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 48px;
+}
+
+.interactive-steps--off {
+  opacity: 0;
+}
+
+.interactive-steps--on {
+  opacity: 1;
+
+  .interactive-step {
+    grid-row: 1 / 1;
+  }
+
+  .interactive-step:not(.interactive-step--active) {
+    opacity: 0;
+  }
+
+  .interactive-step__text {
+    &::after {
+      content: "";
+      margin-right: auto;
+      margin-left: auto;
+      width: 100px;
+      height: 48px;
+      border-bottom: 1px solid $color-border;
+
+      @include media-to($size-tab) {
+        display: none;
+      }
+
+      @include media-from($size-tab) {
+        display: block;
+      }
+    }
+  }
+}
+
+.interactive-step--active {
+  z-index: 2;
+  opacity: 1;
+}
+
+.interactive-step {
+  display: grid;
+  grid-column: 1 / 1;
+  grid-column-gap: 24px;
+  transition: .5s ease-in opacity;
+
+  @include center;
+  @include bordered-image;
+  @include photo-box-setup;
+
+  &:not(.interactive-step--active) {
+    z-index: 1;
+  }
+
+  @include media-to(630px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 180px 360px auto;
+    grid-template-areas:
+      "text"
+      "figure"
+      "btn";
+    grid-row-gap: 12px;
+  }
+
+  @include media-from(630px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "text figure"
+      "btn  figure";
+  }
+
+  @include media-betw(630px, $size-desk) {
+    grid-template-rows: 200px 200px;
+  }
+
+  @include media-from($size-desk) {
+    grid-template-rows: 300px 300px;
+  }
+}
+
+.interactive-step__figure {
+  width: 100%;
+  height: 100%;
+  grid-area: figure;
+  object-fit: cover;
+}
+
+.interactive-step__text {
+  grid-area: text;
+  text-align: center;
+}
+
+.interactive-step__label {
+
+  @include media-to($size-tab) {
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+
+  @include media-from($size-tab) {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
+
+.interactive-step__btn {
+  grid-area: btn;
+  align-self: center;
+  position: relative;
+  z-index: 3;
+}

@@ -5,6 +5,7 @@ import './component';
 
 import Poppin from "./poppin";
 import Carousel from "./carousel";
+import InteractiveSteps from "./interactive-step";
 
 const components = [
   'site/header',
@@ -14,7 +15,7 @@ const components = [
 
 $(function() {
   components.forEach((wc) => {
-    loadComponent(`_components/${wc}.wc.html`);
+    loadComponent(`/_components/${wc}.wc.html`);
   });
 
   $("img").each(function(i, o) {
@@ -26,6 +27,8 @@ $(function() {
   });
 
   $(".carousel").each(Carousel.setup);
+
+  InteractiveSteps.init();
 
   $(".portfolio-list").each(function(i, o) {
     let $port = $(o);
