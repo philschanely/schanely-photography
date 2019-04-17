@@ -21,7 +21,7 @@ nav {
     justify-content: center;
     border-bottom: 1px solid $color-border;
 
-    .menu-item {
+    > .menu-item {
       position: relative;
       font-size: 1.7rem;
       line-height: 2.3rem;
@@ -100,7 +100,7 @@ nav {
     @include media-large {
       width: 100%;
 
-      .menu-item {
+      > .menu-item {
         border-bottom: 2px solid transparent;
       }
     }
@@ -110,7 +110,7 @@ nav {
     @include media-phone {
       align-items: flex-end;
 
-      .menu-item {
+      > .menu-item {
         font-size: 1.2rem;
         line-height: 1.6rem;
         letter-spacing: 1px;

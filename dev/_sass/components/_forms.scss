@@ -62,7 +62,7 @@ textarea {
     input[type="submit"],
     input[type="button"],
     button {
-      @include button($color-accent);
+      @include button($color-primary);
     }
   }
 }

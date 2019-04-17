@@ -650,7 +650,7 @@ p {
   padding-bottom: 12px;
   width: calc(100vw);
   height: calc(100vw / 1.618);
-  max-height: 100vh;
+  max-height: calc(100vh - 80px);
   overflow: hidden;
   position: relative; }
 
@@ -1060,12 +1060,12 @@ textarea {
 .nf-form-content .field-wrap input[type="submit"]:not(.btn-ghost),
 .nf-form-content .field-wrap input[type="button"]:not(.btn-ghost),
 .nf-form-content .field-wrap button:not(.btn-ghost) {
-  border: 1px solid #b0c6dc; }
+  border: 1px solid #96ded1; }
 
 .nf-form-content .field-wrap input[type="submit"]:not(.btn-solid),
 .nf-form-content .field-wrap input[type="button"]:not(.btn-solid),
 .nf-form-content .field-wrap button:not(.btn-solid) {
-  color: #b0c6dc;
+  color: #96ded1;
   background-color: #fff; }
 
 .nf-form-content .field-wrap input[type="submit"].btn-solid:not(:hover), .nf-form-content .field-wrap input[type="submit"]:hover:not(.btn-ghost),
@@ -1074,18 +1074,18 @@ textarea {
 .nf-form-content .field-wrap button.btn-solid:not(:hover),
 .nf-form-content .field-wrap button:hover:not(.btn-ghost) {
   color: #fff;
-  background-color: #b0c6dc; }
+  background-color: #96ded1; }
 
 .nf-form-content .field-wrap input[type="submit"].btn-solid:hover,
 .nf-form-content .field-wrap input[type="button"].btn-solid:hover,
 .nf-form-content .field-wrap button.btn-solid:hover {
   color: #fff;
-  background-color: #6993bd; }
+  background-color: #48c6af; }
 
 .nf-form-content .field-wrap input[type="submit"].btn-ghos:hover,
 .nf-form-content .field-wrap input[type="button"].btn-ghos:hover,
 .nf-form-content .field-wrap button.btn-ghos:hover {
-  color: #6993bd;
+  color: #48c6af;
   cursor: pointer; }
 
 .nf-form-title {
@@ -1273,29 +1273,29 @@ nav {
     flex-flow: row wrap;
     justify-content: center;
     border-bottom: 1px solid rgba(151, 151, 151, 0.3); }
-    nav > .menu .menu-item {
+    nav > .menu > .menu-item {
       position: relative;
       font-size: 1.7rem;
       line-height: 2.3rem;
       letter-spacing: 3px;
       text-transform: uppercase;
       font-family: "Open Sans Condensed", sans-serif; }
-      nav > .menu .menu-item.current-menu-item, nav > .menu .menu-item.current-menu-parent {
+      nav > .menu > .menu-item.current-menu-item, nav > .menu > .menu-item.current-menu-parent {
         border-bottom: 2px solid #96ded1; }
-        nav > .menu .menu-item.current-menu-item > a, nav > .menu .menu-item.current-menu-parent > a {
+        nav > .menu > .menu-item.current-menu-item > a, nav > .menu > .menu-item.current-menu-parent > a {
           padding-bottom: 17px;
           color: #96ded1; }
-      nav > .menu .menu-item:hover {
+      nav > .menu > .menu-item:hover {
         border-bottom: 2px solid rgba(85, 85, 85, 0.85); }
-        nav > .menu .menu-item:hover > a {
+        nav > .menu > .menu-item:hover > a {
           padding-bottom: 17px;
           background-color: rgba(150, 222, 209, 0.1); }
-        nav > .menu .menu-item:hover > ul {
+        nav > .menu > .menu-item:hover > ul {
           margin-left: 0;
           display: block; }
-      nav > .menu .menu-item::before {
+      nav > .menu > .menu-item::before {
         display: none !important; }
-      nav > .menu .menu-item > ul {
+      nav > .menu > .menu-item > ul {
         width: 100%;
         min-width: 100px;
         max-width: 300px;
@@ -1305,36 +1305,36 @@ nav {
         top: 58px;
         left: 0;
         background-color: #96ded1; }
-        nav > .menu .menu-item > ul li {
+        nav > .menu > .menu-item > ul li {
           width: 100%;
           display: block;
           border: none; }
-          nav > .menu .menu-item > ul li::before {
+          nav > .menu > .menu-item > ul li::before {
             display: none; }
-          nav > .menu .menu-item > ul li:hover {
+          nav > .menu > .menu-item > ul li:hover {
             border: none; }
-            nav > .menu .menu-item > ul li:hover a {
+            nav > .menu > .menu-item > ul li:hover a {
               padding: 8px 12px;
               color: #fff;
               background-color: #48c6af; }
-        nav > .menu .menu-item > ul a {
+        nav > .menu > .menu-item > ul a {
           padding: 8px 12px;
           color: #fff;
           text-align: center; }
     @media (min-width: 1600px) {
       nav > .menu {
         width: 100%; }
-        nav > .menu .menu-item {
+        nav > .menu > .menu-item {
           border-bottom: 2px solid transparent; } }
     @media (max-width: 759px) {
       nav > .menu {
         align-items: flex-end; }
-        nav > .menu .menu-item {
+        nav > .menu > .menu-item {
           font-size: 1.2rem;
           line-height: 1.6rem;
           letter-spacing: 1px;
           text-align: center; }
-          nav > .menu .menu-item > ul {
+          nav > .menu > .menu-item > ul {
             top: 51px; } }
 
 body.poppin-on {

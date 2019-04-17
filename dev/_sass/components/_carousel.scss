@@ -3,7 +3,7 @@
   padding-bottom: 12px;
   width: calc(100vw);
   height: calc(100vw / 1.618);
-  max-height: 100vh;
+  max-height: calc(100vh - 80px);
   overflow: hidden;
   position: relative;
 }
