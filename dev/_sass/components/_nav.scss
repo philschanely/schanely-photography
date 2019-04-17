@@ -65,7 +65,7 @@ nav {
         display: none;
         position: absolute;
         z-index: 10;
-        top: 59px;
+        top: 58px;
         left: 0;
         background-color: $color-primary;
 
@@ -117,16 +117,16 @@ nav {
         text-align: center;
 
         a {
-          padding: 6px;
+          // padding: 8px 12px;
         }
 
         &.current-menu-item a,
         &:hover a {
-          padding-bottom: 5px;
+          // padding-bottom: 5px;
         }
 
         > ul {
-          top: 28px;
+          top: 51px;
         }
       }
     }

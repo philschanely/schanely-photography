@@ -1163,22 +1163,6 @@ textarea {
   margin-left: auto;
   padding: 11px;
   border: 1px solid rgba(151, 151, 151, 0.3); }
-  @media (max-width: 629px) {
-    .interactive-step {
-      grid-template-columns: 100%;
-      grid-template-rows: 180px 360px auto;
-      grid-template-areas: "text" "figure" "btn";
-      grid-row-gap: 12px; } }
-  @media (min-width: 630px) {
-    .interactive-step {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "text figure" "btn  figure"; } }
-  @media (min-width: 630px) and (max-width: 1199px) {
-    .interactive-step {
-      grid-template-rows: 200px 200px; } }
-  @media (min-width: 1200px) {
-    .interactive-step {
-      grid-template-rows: 300px 300px; } }
   .interactive-step:not(.carousel__item) {
     position: relative; }
   .interactive-step img {
@@ -1200,6 +1184,22 @@ textarea {
     left: 0; }
   .interactive-step:not(.interactive-step--active) {
     z-index: 1; }
+  @media (max-width: 629px) {
+    .interactive-step {
+      grid-template-columns: 100%;
+      grid-template-rows: 180px 360px auto;
+      grid-template-areas: "text" "figure" "btn";
+      grid-row-gap: 12px; } }
+  @media (min-width: 630px) {
+    .interactive-step {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "text figure" "btn  figure"; } }
+  @media (min-width: 630px) and (max-width: 1199px) {
+    .interactive-step {
+      grid-template-rows: 200px 200px; } }
+  @media (min-width: 1200px) {
+    .interactive-step {
+      grid-template-rows: 300px 300px; } }
 
 .interactive-step__figure {
   width: 100%;
@@ -1302,7 +1302,7 @@ nav {
         display: none;
         position: absolute;
         z-index: 10;
-        top: 59px;
+        top: 58px;
         left: 0;
         background-color: #96ded1; }
         nav > .menu .menu-item > ul li {
@@ -1334,13 +1334,8 @@ nav {
           line-height: 1.6rem;
           letter-spacing: 1px;
           text-align: center; }
-          nav > .menu .menu-item a {
-            padding: 6px; }
-          nav > .menu .menu-item.current-menu-item a,
-          nav > .menu .menu-item:hover a {
-            padding-bottom: 5px; }
           nav > .menu .menu-item > ul {
-            top: 28px; } }
+            top: 51px; } }
 
 body.poppin-on {
   margin-top: 40px; }
@@ -1352,35 +1347,34 @@ body.poppin-on {
       margin-top: 80px; } }
 
 .poppin {
-  font-family: "IBM Plex Serif", sans-serif;
-  position: fixed;
-  top: -60px;
-  z-index: 2;
-  left: 0;
-  right: 0;
   display: flex;
+  position: fixed;
+  z-index: 2;
+  top: -60px;
+  right: 0;
+  left: 0;
   background-color: #7bc3b6;
-  transition: 0.2s all linear; }
+  transition: .2s all linear;
+  font-family: "IBM Plex Serif", sans-serif; }
   .poppin.on {
     top: 0; }
   .poppin a {
-    color: #fff;
-    font-weight: 600;
-    display: block;
     padding: 8px 10px 5px;
-    color: #fff;
+    display: block;
     flex: 1;
-    text-decoration: none;
-    text-align: center; }
-  .poppin .close {
-    outline: none;
-    background: transparent;
+    font-weight: 600;
     color: #fff;
-    font-size: 2.3rem;
-    width: 30px;
-    border: none;
-    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none; }
+  .poppin .close {
     padding: 5px 20px 8px;
+    width: 30px;
+    box-sizing: border-box;
+    font-size: 2.3rem;
+    color: #fff;
+    border: none;
+    background: transparent;
+    outline: none;
     cursor: pointer; }
 
 .page-about__figure {
@@ -1537,31 +1531,6 @@ body.poppin-on {
     max-width: 1600px; } }
 
 /* TODO: Make to generic btn-group */
-.home-btn-group {
-  margin-top: 50px;
-  display: flex; }
-  .home-btn-group .btn {
-    margin-left: 24px;
-    flex: 1; }
-    .home-btn-group .btn:first-of-type {
-      margin-left: 0; }
-  @media (max-width: 759px) {
-    .home-btn-group {
-      margin-top: 20px; }
-      .home-btn-group .btn {
-        margin-left: 12px;
-        flex: 1; }
-        .home-btn-group .btn:first-of-type {
-          margin-left: 0; } }
-  @media (max-width: 1199px) {
-    .home-btn-group {
-      margin-top: 20px; }
-      .home-btn-group .btn {
-        margin-left: 12px;
-        flex: 1; }
-        .home-btn-group .btn:first-of-type {
-          margin-left: 0; } }
-
 .page-home {
   width: 100%; }
 
