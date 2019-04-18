@@ -7,7 +7,7 @@
  Version: 1.1
  Tags:
  */
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -1127,13 +1127,12 @@ textarea {
   grid-template-columns: 100%;
   grid-row-gap: 48px; }
 
-.interactive-steps--off {
-  opacity: 0; }
-
 .interactive-steps--on {
   opacity: 1; }
   .interactive-steps--on .interactive-step {
     grid-row: 1 / 1; }
+    .interactive-steps--on .interactive-step:not(:first-child) {
+      display: grid; }
   .interactive-steps--on .interactive-step:not(.interactive-step--active) {
     opacity: 0; }
   .interactive-steps--on .interactive-step__btn::before {
@@ -1203,11 +1202,18 @@ textarea {
   @media (min-width: 1200px) {
     .interactive-step {
       grid-template-rows: 350px 150px; } }
+  .interactive-step:not(:first-child) {
+    display: none; }
 
 .interactive-step__figure {
   width: 100%;
   height: 100%;
   grid-area: figure;
+  overflow: hidden; }
+
+.interactive-step__image {
+  width: 100%;
+  height: 100%;
   object-fit: cover; }
 
 .interactive-step__text {
