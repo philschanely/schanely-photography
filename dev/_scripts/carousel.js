@@ -2,6 +2,7 @@ import $ from 'jquery';
 import enquire from "enquire.js";
 
 class Carousel {
+  // Carousels need cookies.
   constructor() {
     this.interval = null;
   }

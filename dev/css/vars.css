@@ -1,0 +1,12 @@
+:root {
+  --color-background: #fff;
+  --color-body: #555;
+  --color-display: #333;
+  --color-primary: #133457;
+  --color-secondary: #7bc3b6;
+
+  --font-body: "IBM Plex Serif", serif;
+  --font-display: "Open Sans Condensed", sans-serif;
+
+  --weight-bold: 500;
+}

@@ -10,7 +10,8 @@ import InteractiveSteps from "./interactive-step";
 const components = [
   'site/header',
   'site/nav',
-  'site/footer'
+  'site/footer',
+  'ksp-button'
 ];
 
 $(function() {

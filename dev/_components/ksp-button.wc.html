@@ -1,0 +1,84 @@
+<template>
+  <button class="ksp-button t-ksp-button">
+    <slot></slot>
+  </button>
+</template>
+
+<style>
+
+.ksp-button {
+  margin: 100px auto; /* PUT ME ELSEWHERE */
+  padding: 15px 30px;
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  background-color: var(--color-background);
+  transition-property: background-color, border;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+
+.ksp-button:not(.ksp-button--secondary) {
+  border-color: var(--color-primary);
+}
+
+.ksp-button--secondary {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.ksp-button:hover {
+  color: var(--color-primary);
+}
+
+.ksp-button:not(.ksp-button--secondary):hover {
+  background-color: var(--color-primary);
+}
+
+.ksp-button--secondary:hover {
+  background-color: var(--color-secondary);
+}
+
+.ksp-button:focus {
+  outline: none;
+}
+
+.ksp-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 1px solid transparent;
+  transition-property: border;
+  transition-duration: .1s;
+}
+
+.ksp-button:focus::after {
+  border-color: var(--color-primary);
+}
+
+.t-ksp-button {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+
+</style>
+
+<script>
+  export default {
+		name: 'ksp-button',
+		onClick() {
+      console.log('Pushed the button');
+    },
+    onConnected(el) {
+      console.log(el.getAttribute('color'));
+    }
+	}
+</script>

@@ -74,7 +74,7 @@
 }
 
 @mixin font-heading() {
-  font-family: "IBM Plex Serif", sans-serif;
+  font-family: "IBM Plex Serif", serif;
 }
 
 @mixin font-accent() {
@@ -204,5 +204,25 @@
 
   &.half-pad-left {
     padding-left: $pad/2 - 1;
+  }
+}
+
+@mixin text-lead() {
+  &:not(.strong) {
+    font-style: italic;
+  }
+
+  font-weight: 200;
+
+  @include font-heading;
+
+  @include media-to($size-desk) {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  @include media-from($size-desk) {
+    font-size: 2rem;
+    line-height: 3.6rem;
   }
 }

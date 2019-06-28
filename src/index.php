@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 <main>
   <?php if (have_posts()) :?>
-    <ul class="article-list flex-tile">
+    <ul class="article-list flex-tile list--unstyled">
       <?php while(have_posts()) : the_post(); ?>
         <li>
           <a href="<?php the_permalink(); ?>" class="blog-hook">
             <div class="blog-hook__cover">
               <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail('post-thumbnail');
+                the_post_thumbnail('full');
               } ?>
             </div>
             <div class="blog-hook__lead-in">

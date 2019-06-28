@@ -1,5 +1,12 @@
-/* Source: https://blog.comandeer.pl/assets/jednoplikowe-komponenty/loader.js */
+/*
+	Adapted from Tomasz Jakut:
+	- https://medium.com/content-uneditable/implementing-single-file-web-components-22adeaa0cd17
+	- https://blog.comandeer.pl/assets/jednoplikowe-komponenty/loader.js
+*/
+
 window.loadComponent = ( function() {
+
+	// #1: Fetches component definition file and parses out the pieces
 	function fetchAndParse( URL ) {
 		return fetch( URL ).then( ( response ) => {
 			return response.text();
@@ -19,6 +26,7 @@ window.loadComponent = ( function() {
 		} );
 	}
 
+	// #2: Extracts settings and applies them
 	function getSettings( { template, style, script } ) {
 		const jsFile = new Blob( [ script.textContent ], { type: 'application/javascript' } );
 		const jsURL = URL.createObjectURL( jsFile );
@@ -45,11 +53,16 @@ window.loadComponent = ( function() {
 		} );
 	}
 
+	// #3: Registers the component for use on the page
 	function registerComponent( { template, style, name, listeners } ) {
 		class UnityComponent extends HTMLElement {
 			connectedCallback() {
 				this._upcast();
 				this._attachListeners();
+
+				if (listeners.connected) {
+					listeners.connected(this);
+				}
 			}
 
 			_upcast() {
